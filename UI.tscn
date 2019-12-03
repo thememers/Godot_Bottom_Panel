@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/Bottom Panel Writer/Panel_Writer.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+rect_min_size = Vector2( 0, 210 )
+size_flags_vertical = 2
+script = ExtResource( 1 )
+
+[node name="Finalize" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.5
+margin_top = -10.0
+margin_right = 32.5
+margin_bottom = 10.0
+text = "Finialize"
+
+[node name="Error" type="AcceptDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -21.0
+margin_right = 100.0
+margin_bottom = 49.0
+popup_exclusive = true
+window_title = "Error"
+dialog_text = "There is a field unfilled"
+[connection signal="pressed" from="Finalize" to="." method="_on_Finalize_pressed"]
