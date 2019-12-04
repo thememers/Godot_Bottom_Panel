@@ -20,6 +20,7 @@ func _on_Finalize_pressed(): #Refresh values then send out a signal
 
 func ResetValueArray():#store values in an array
 	var Count = Fields.get_child_count()
+	Values.clear()
 	for i in Count:
 		var Data
 		var Check = Fields.get_child(i)
